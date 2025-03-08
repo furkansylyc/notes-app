@@ -1,19 +1,19 @@
-# PROJE ADI 
+# Easy Note
 
-**Proje Tanımı:** Projenin ne iş yaptığını anlatan bir paragraflık tanıtım metni. 
+**Proje Tanımı:** 
+Easy Note, gündelik hayatta işlerinizi oldukça kolaylaştıracak bir not uygulaması. Basit ve şık arayüzü sayesinde herkesin rahatça kullanabileceği bir yapıya sahip. Not alma, düzenleme ve silme gibi temel işlemleri hızlıca yapabilir, işlerinizi daha planlı ve düzenli bir hale getirebilirsiniz.
+Hatırlatma özelliği sayesinde, belirlediğiniz saatte aldığınız not size bildirim olarak gelecek ve artık hiçbir işinizi unutmayacaksınız. Güçlü arama fonksiyonu ile hatırlayamadığınız notu saniyeler içinde bulabilir, ihtiyacınız olan bilgilere anında ulaşabilirsiniz. Tüm notlarınızı tek bir ekranda görüntüleyebilir, notlar arasında kolayca gezinebilir ve favori notlarınızı işaretleyerek hızlı erişim sağlayabilirsiniz.
+Notlarınıza özel etiketler ekleyerek daha düzenli bir yapı oluşturabilir, farklı kategoriler altında gruplayabilirsiniz.Easy Note,sadece bir not alma uygulaması değil, aynı zamanda günlük hayatınızı daha düzenli hale getiren bir asistan.
 
-Örnek: X isimli e-ticaret sitemiz, online alışveriş deneyimini kolay ve keyifli hale getirmek için tasarlandı. Geniş ürün yelpazemiz sayesinde müşterilerimize en iyi seçenekleri sunarken, kullanıcı dostu arayüzümüz ile de alışveriş yapmayı daha rahat hale getiriyoruz.Sitemizde yer alan ürünler, kaliteli ve güvenilir markaların en yeni ve trend ürünlerinden oluşuyor. Müşterilerimiz, aradıkları ürünleri hızlı ve kolay bir şekilde bulabilirken, aynı zamanda satın alma süreçlerinde de sorunsuz bir deneyim yaşayacaklar.Hızlı teslimat seçenekleri, güvenli ödeme sistemleri ve müşteri memnuniyetine önem veren satış sonrası hizmetlerimizle, X olarak müşterilerimizin beklentilerini en üst seviyede karşılamayı hedefliyoruz. Her zaman en iyi fiyatlarla, kaliteli ürünleri müşterilerimize sunmak için çalışıyoruz ve müşteri memnuniyeti bizim için her zaman önceliklidir.X e-ticaret sitemize hoş geldiniz, size hizmet vermek için sabırsızlanıyoruz.
+**Proje Kategorisi:** Gündelik Uygulama
 
-**Proje Kategorisi:** Projenin hangi alanda yapıldığını belirten bir kategori. Örnek: E-Ticaret, Sosyal Medya vb. 
+**Referans Uygulama:** [Evernote](evernote.com)
 
-**Referans Uygulama:** [abc.com](abc.com)
+**Uygulama Adresi:** [Evernote](evernote.com)
 
-**Uygulama Adresi:** [abc.com](abc.com)
+**Grup Adı:** RaApp
 
-**Grup Adı:** Belirlediğiniz grup adı
-
-**Proje Ekibi:** Ali, Veli, Selami, Ayşe, Fatma, Hayriye
-
+**Proje Ekibi:** Furkan
 1. [Gereksinim Analizi](Gereksinim-Analizi.md)
 2. [Durum Diyagramı](Durum-Diyagramı.md)
 3. [Durum Senaryoları](Durum-Senaryoları.md)
