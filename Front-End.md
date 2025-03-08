@@ -1,6 +1,6 @@
 Frontend'i yayınladığınız domain adresi: http://frontend.com
 
-# Furkan Söylwyici Frontend #
+# Furkan Söyleyici Frontend #
 
 - Not Ekleme  
 - Not Düzenleme  
