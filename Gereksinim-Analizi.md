@@ -1,14 +1,16 @@
 
 # Gereksinimler
-1.Not Ekleme/
-2.Not Düzenleme
-3.Not Silme
-4.Alarm Ekleme  
-5.Bildirim Gönderme
-6.Tüm Notları Görüntüleme
-7.Notların Favorilere Eklenmesi
-8.Not Arama
-9.Notlara Özel Etiketler
+
+- Not Ekleme  
+- Not Düzenleme  
+- Not Silme  
+- Alarm Ekleme  
+- Bildirim Gönderme  
+- Tüm Notları Görüntüleme  
+- Notların Favorilere Eklenmesi  
+- Not Arama  
+- Notlara Özel Etiketler  
+
 
 
 
