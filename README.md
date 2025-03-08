@@ -7,7 +7,7 @@ Notlarınıza özel etiketler ekleyerek daha düzenli bir yapı oluşturabilir, 
 
 **Proje Kategorisi:** Gündelik Uygulama
 
-**Referans Uygulama:** Evernote  
+**Referans Uygulama:** [Evernote](https://evernote.com)
 
 **Uygulama Adresi:** [Evernote](https://evernote.com)
 
