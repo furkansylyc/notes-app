@@ -1,4 +1,4 @@
-
+# Uygulama Screenshotları gösterildi. #
 
 # Furkan Söyleyici Frontend #
 
