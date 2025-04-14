@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/delete_panel"
+    android:layout_height="wrap_content">
+    
+    <View
+        android:layout_width="100dp"
+        android:background="@drawable/delete_shape"
+        android:layout_margin="10dp"
+        android:layout_height="7dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/regular"
+        android:textSize="18sp"
+        android:text="Notu silmek istediğinize \n emin misiniz?" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hayır"
+        android:id="@+id/delete_no"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:padding="7dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/bold"
+        android:background="@drawable/no_button"
+        android:textSize="18sp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/delete_yes"
+        android:text="Evet"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="7dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:background="@drawable/yes_button"
+        android:fontFamily="@font/bold"
+        android:textSize="18sp" />
+
+</LinearLayout>

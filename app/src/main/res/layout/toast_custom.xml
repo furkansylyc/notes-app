@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:id="@+id/toast_layout_root"
+    android:padding="8dp"
+    android:background="@drawable/toast_shape"
+    android:elevation="6dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/toast_image"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/done"
+        android:padding="4dp" />
+
+    <TextView
+        android:id="@+id/toast_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:paddingStart="12dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center"
+        android:text="Not Eklendi"
+        android:fontFamily="@font/bold" />
+
+</LinearLayout>
