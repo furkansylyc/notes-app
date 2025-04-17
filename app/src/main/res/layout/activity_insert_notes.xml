@@ -101,17 +101,44 @@
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/doneNotesButton"
+        android:id="@+id/menuButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_gravity="end|bottom"
-        android:layout_margin="25dp"
-        android:layout_marginEnd="330dp"
-        android:layout_marginBottom="650dp"
-        android:contentDescription="Onayla"
-        android:src="@drawable/done"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="30dp"
+        android:contentDescription="Menü Aç"
+        android:src="@drawable/menu"
         app:backgroundTint="@color/turcian" />
+
+
+    <LinearLayout
+        android:id="@+id/fabMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="100dp"
+        android:visibility="gone">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/alarmButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="Alarm"
+            android:src="@drawable/alarm"
+            app:backgroundTint="@color/turcian" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/doneNotesButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Onayla"
+            android:src="@drawable/baseline_add_24"
+            app:backgroundTint="@color/turcian" />
+    </LinearLayout>
 
 </RelativeLayout>

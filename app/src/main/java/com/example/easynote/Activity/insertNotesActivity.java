@@ -1,11 +1,11 @@
 package com.example.easynote.Activity;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,6 +17,7 @@ import com.example.easynote.Model.Notes;
 import com.example.easynote.R;
 import com.example.easynote.ViewModel.NotesViewModel;
 import com.example.easynote.databinding.ActivityInsertNotesBinding;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.Date;
 
@@ -26,6 +27,10 @@ public class insertNotesActivity extends AppCompatActivity {
     String title, subtitle, notes;
     NotesViewModel notesViewModel;
     String priority = "3";
+    FloatingActionButton menuButton, alarmButton, doneNotesButton;
+    LinearLayout fabMenu;
+
+    boolean isMenuOpen = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +38,30 @@ public class insertNotesActivity extends AppCompatActivity {
         binding = ActivityInsertNotesBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        menuButton = findViewById(R.id.menuButton);
+        alarmButton = findViewById(R.id.alarmButton);
+        doneNotesButton = findViewById(R.id.doneNotesButton);
+        fabMenu = findViewById(R.id.fabMenu);
+
+        menuButton.setOnClickListener(v -> {
+            if (isMenuOpen) {
+                fabMenu.animate().alpha(0f).translationY(100).setDuration(300).withEndAction(() -> fabMenu.setVisibility(View.GONE)).start();
+                isMenuOpen = false;
+            } else {
+                fabMenu.setVisibility(View.VISIBLE);
+                fabMenu.setAlpha(0f);
+                fabMenu.setTranslationY(100);
+                fabMenu.animate().alpha(1f).translationY(0).setDuration(300).start();
+                isMenuOpen = true;
+            }
+        });
+
+        alarmButton.setOnClickListener(v -> {
+            Toast.makeText(this, "Alarm özelliği yakında geliyor 🕒", Toast.LENGTH_SHORT).show();
+        });
+
         notesViewModel = new ViewModelProvider(this).get(NotesViewModel.class);
 
-        // Priority selection (Green, Yellow, Red)
         binding.greenTag.setOnClickListener(v -> {
             binding.greenTag.setImageResource(R.drawable.done);
             binding.yellowTag.setImageResource(0);
@@ -97,7 +123,6 @@ public class insertNotesActivity extends AppCompatActivity {
         notesViewModel.insertNote(notes1);
         Log.d("CreateNotes", "Note inserted successfully!");
 
-        // Show custom toast
         LayoutInflater inflater = getLayoutInflater();
         View layout = inflater.inflate(R.layout.toast_custom, (ViewGroup)
                 findViewById(R.id.toast_layout_root));
@@ -105,8 +130,6 @@ public class insertNotesActivity extends AppCompatActivity {
         toast.setDuration(Toast.LENGTH_SHORT);
         toast.setView(layout);
         toast.show();
-
-        // Close the activity
         finish();
     }
 }

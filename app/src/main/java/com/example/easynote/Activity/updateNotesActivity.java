@@ -12,12 +12,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.easynote.Model.Notes;
@@ -25,6 +21,7 @@ import com.example.easynote.R;
 import com.example.easynote.ViewModel.NotesViewModel;
 import com.example.easynote.databinding.ActivityUpdateNotesBinding;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.Date;
 import java.util.HashSet;
@@ -36,6 +33,11 @@ public class updateNotesActivity extends AppCompatActivity {
     NotesViewModel notesViewModel;
     String priority ="3";
     String uptitle,upsubtitle,upnotes,uppriority;
+
+    FloatingActionButton menuButton, alarmButton, updateNotesButton;
+    LinearLayout fabMenu;
+    boolean isMenuOpen = false;
+
     int upid;
 
     @Override
@@ -49,6 +51,11 @@ public class updateNotesActivity extends AppCompatActivity {
         upsubtitle = getIntent().getStringExtra("subtitle");
         upnotes = getIntent().getStringExtra("notes");
         uppriority = getIntent().getStringExtra("priority");
+        menuButton = findViewById(R.id.menuButton);
+        alarmButton = findViewById(R.id.alarmButton);
+        updateNotesButton = findViewById(R.id.updateNotesButton);
+        fabMenu = findViewById(R.id.fabMenu);
+
 
         binding.updateTitle.setText(uptitle);
         binding.updateSubtitle.setText(upsubtitle);
@@ -75,6 +82,24 @@ public class updateNotesActivity extends AppCompatActivity {
                 priority = "3";
                 break;
         }
+
+        menuButton.setOnClickListener(v -> {
+            if (isMenuOpen) {
+                fabMenu.animate().alpha(0f).translationY(100).setDuration(300).withEndAction(() -> fabMenu.setVisibility(View.GONE)).start();
+                isMenuOpen = false;
+            } else {
+                fabMenu.setVisibility(View.VISIBLE);
+                fabMenu.setAlpha(0f);
+                fabMenu.setTranslationY(100);
+                fabMenu.animate().alpha(1f).translationY(0).setDuration(300).start();
+                isMenuOpen = true;
+            }
+        });
+
+        alarmButton.setOnClickListener(v -> {
+            Toast.makeText(this, "Alarm özelliği yakında geliyor 🕒", Toast.LENGTH_SHORT).show();
+        });
+
 
 
 
@@ -112,6 +137,10 @@ public class updateNotesActivity extends AppCompatActivity {
 
         });
     }
+
+
+
+
 
     private void UpdateNotes(String title, String subtitle, String notes) {
         Date date = new Date();

@@ -1,10 +1,15 @@
 package com.example.easynote;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import androidx.appcompat.widget.SearchView;
+
+import android.view.View;
+import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
@@ -29,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView notesRecycler;
     NotesAdapter adapter;
     TextView nofilter, yenieski, eskiyeni, fav;
+
     List<Notes> filterNotesAllList;
 
 
@@ -47,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         eskiyeni = findViewById(R.id.eskiyeni);
         fav = findViewById(R.id.fav);
 
+
         nofilter.setBackgroundResource(R.drawable.filter_selected);
 
         nofilter.setOnClickListener( v -> {
@@ -61,20 +68,6 @@ public class MainActivity extends AppCompatActivity {
             });
         });
 
-
-
-        nofilter.setOnClickListener(v -> {
-            nofilter.setBackgroundResource(R.drawable.filter_selected);
-            yenieski.setBackgroundResource(R.drawable.filter_unselected);
-            eskiyeni.setBackgroundResource(R.drawable.filter_unselected);
-            fav.setBackgroundResource(R.drawable.filter_unselected);
-            notesViewModel.getallNotes.observe(this, notes -> {
-                notesRecycler.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
-                adapter = new NotesAdapter(MainActivity.this, notes, notesViewModel);
-                filterNotesAllList = notes;
-                notesRecycler.setAdapter(adapter);
-            });
-        });
         yenieski.setOnClickListener(v -> {
             yenieski.setBackgroundResource(R.drawable.filter_selected);
             nofilter.setBackgroundResource(R.drawable.filter_unselected);
@@ -133,6 +126,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
 
 
     public void setAdapter(List<Notes> notes) {

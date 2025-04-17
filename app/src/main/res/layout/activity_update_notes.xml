@@ -1,118 +1,144 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/bg8"
     tools:context=".Activity.insertNotesActivity">
 
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="25dp"
-            android:id="@+id/updateTitle"
-            android:textColor="@color/edit_text_color"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/edit_text"
-            android:padding="15dp"
-            android:hint="Başlık"
-            android:fontFamily="@font/regular" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="25dp"
-            android:id="@+id/updateSubtitle"
-            android:textColor="@color/edit_text_color"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/edit_text"
-            android:padding="15dp"
-            android:hint="Alt Başlık"
-            android:fontFamily="@font/regular" />
-
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="25dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/updateTitle"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/white"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/edit_text_color"
+                android:background="@drawable/edit_text"
+                android:padding="15dp"
+                android:hint="Başlık"
+                android:fontFamily="@font/regular" />
+
+            <EditText
+                android:id="@+id/updateSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/edit_text_color"
+                android:background="@drawable/edit_text"
+                android:padding="15dp"
+                android:hint="Alt Başlık"
+                android:fontFamily="@font/regular" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/regular"
+                    android:textSize="20sp"
+                    android:text="Etiket" />
+
+                <ImageView
+                    android:id="@+id/redTag"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_margin="7dp"
+                    android:background="@drawable/red_tag" />
+
+                <ImageView
+                    android:id="@+id/yellowTag"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_margin="7dp"
+                    android:background="@drawable/yellow_tag" />
+
+                <ImageView
+                    android:id="@+id/greenTag"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_margin="7dp"
+                    android:background="@drawable/green_tag" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/updateNotes"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/edit_text_color"
+                android:background="@drawable/edit_text"
+                android:padding="15dp"
+                android:gravity="start"
                 android:fontFamily="@font/regular"
-                android:textSize="20sp"
-                android:text="Etiket" />
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_margin="7dp"
-                android:id="@+id/redTag"
-                android:background="@drawable/red_tag" />
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_margin="7dp"
-                android:id="@+id/yellowTag"
-                android:background="@drawable/yellow_tag" />
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_margin="7dp"
-                android:id="@+id/greenTag"
-                android:background="@drawable/green_tag" />
+                android:hint="Not" />
         </LinearLayout>
-
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="350dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="25dp"
-            android:layout_marginTop="25dp"
-            android:textColor="@color/edit_text_color"
-            android:id="@+id/updateNotes"
-            android:hint="Not"
-            android:background="@drawable/edit_text"
-            android:padding="15dp"
-            android:gravity="start"
-            android:fontFamily="@font/regular" />
-
-    </LinearLayout>
-
+    </ScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/updateNotesButton"
+        android:id="@+id/menuButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_gravity="end|bottom"
-        android:layout_margin="25dp"
-        android:layout_marginEnd="330dp"
-        android:layout_marginBottom="650dp"
-        android:contentDescription="Onayla"
-        android:src="@drawable/save"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="30dp"
+        android:contentDescription="Menü Aç"
+        android:src="@drawable/menu"
         app:backgroundTint="@color/turcian" />
+
+
+    <LinearLayout
+        android:id="@+id/fabMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="100dp"
+        android:visibility="gone">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/alarmButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="Alarm"
+            android:src="@drawable/alarm"
+            app:backgroundTint="@color/turcian" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/updateNotesButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Onayla"
+            android:src="@drawable/save"
+            app:backgroundTint="@color/turcian" />
+    </LinearLayout>
+
 
 </RelativeLayout>
