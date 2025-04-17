@@ -1,4 +1,4 @@
-# Uygulama Screenshotları gösterildi. #
+[Uygulama Videosu](uygulama_video.mp4)
 
 # Furkan Söyleyici Frontend #
 
