@@ -8,3 +8,4 @@
 - Notların Favorilere Eklenmesi:Hatırlanması gereken notları favorilere alır ve göz önünde bulundurur.
 - Not Arama:Notları anahtar kelimeler ile bulmaya yarar. 
 - Notlara Özel Etiketler:Notların kategorize edilmesini sağlar.
+- Not Filtreleme:Notların belirlenen şekilde gruplandırılmasını sağlar.
