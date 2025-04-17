@@ -7,7 +7,8 @@
 - Not Silme  
 - Tüm Notları Görüntüleme  
 - Notların Favorilere Eklenmesi  
-- Notlara Özel Etiketler  
+- Notlara Özel Etiketler
+- Not Filtreleme
 
 
 

@@ -9,7 +9,8 @@
 - Tüm Notları Görüntüleme  
 - Notların Favorilere Eklenmesi  
 - Not Arama  
-- Notlara Özel Etiketler  
+- Notlara Özel Etiketler
+- Not Filtreleme 
 
 
 
