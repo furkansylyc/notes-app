@@ -1,4 +1,4 @@
-[Uygulama Videosu](https://youtube.com/shorts/ukW6vlGtVGw))
+[Uygulama Videosu](https://youtube.com/shorts/ukW6vlGtVGw)
 
 # Furkan Söyleyici Frontend #
 
