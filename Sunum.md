@@ -1,1 +1,1 @@
-Uygulamanın tüm gereksinimlerinin çalıştığını gösteren tanıtım video linki eklenecek
+[Uygulama Videosu](https://youtube.com/shorts/ukW6vlGtVGw)
