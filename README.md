@@ -21,3 +21,7 @@ Notlarınıza özel etiketler ekleyerek daha düzenli bir yapı oluşturabilir, 
 5. [Back-End](Back-End.md)
 6. [Video Sunum](Sunum.md)
 
+
+https://github.com/user-attachments/assets/89355e15-8086-42ea-b26d-7de567edbeae
+
+
