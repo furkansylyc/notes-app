@@ -1,32 +1,59 @@
 package com.example.easynote.Model;
 
-import androidx.room.ColumnInfo;
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
+import com.google.gson.annotations.SerializedName;
 
-@Entity(tableName = "Notes_Database")
 public class Notes {
-    @PrimaryKey(autoGenerate = true)
-    public int id;
 
-    @ColumnInfo(name = "notes_title")
-    public String notesTitle;
+    private int id;
 
-    @ColumnInfo(name = "notes_subtitle")
-    public String notesSubtitle;
+    @SerializedName("title")
+    private String notesTitle;
 
+    @SerializedName("subtitle")
+    private String notesSubtitle;
 
-    @ColumnInfo(name = "notes")
-    public String notes;
-    @ColumnInfo(name = "notes_date")
-    public String notesDate;
+    @SerializedName("content")
+    private String notes;
 
-    @ColumnInfo(name = "notes_priority")
-    public String notesPriority;
+    @SerializedName("notesDate")
+    private String notesDate;
 
-    @ColumnInfo(name = "isFavorite")
-    public int isFavorite;
+    @SerializedName("priority")
+    private String notesPriority;
 
+    @SerializedName("isFavorite")
+    private boolean isFavorite;
 
+    public Notes() {}
 
+    public Notes(int id, String notesTitle, String notesSubtitle, String notes, String notesDate, String notesPriority, boolean isFavorite) {
+        this.id = id;
+        this.notesTitle = notesTitle;
+        this.notesSubtitle = notesSubtitle;
+        this.notes = notes;
+        this.notesDate = notesDate;
+        this.notesPriority = notesPriority;
+        this.isFavorite = isFavorite;
+    }
+
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
+
+    public String getNotesTitle() { return notesTitle; }
+    public void setNotesTitle(String notesTitle) { this.notesTitle = notesTitle; }
+
+    public String getNotesSubtitle() { return notesSubtitle; }
+    public void setNotesSubtitle(String notesSubtitle) { this.notesSubtitle = notesSubtitle; }
+
+    public String getNotes() { return notes; }
+    public void setNotes(String notes) { this.notes = notes; }
+
+    public String getNotesDate() { return notesDate; }
+    public void setNotesDate(String notesDate) { this.notesDate = notesDate; }
+
+    public String getNotesPriority() { return notesPriority; }
+    public void setNotesPriority(String notesPriority) { this.notesPriority = notesPriority; }
+
+    public boolean isFavorite() { return isFavorite; }
+    public void setIsFavorite(boolean favorite) { isFavorite = favorite; }
 }

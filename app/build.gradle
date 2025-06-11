@@ -22,7 +22,7 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled = false // Burada `isMinifyEnabled` değil, `minifyEnabled` olmalı.
+            minifyEnabled = false
             proguardFiles(
                     getDefaultProguardFile("proguard-android-optimize.txt"),
                     "proguard-rules.pro"
@@ -40,13 +40,15 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation libs.lifecycle.viewmodel.android
     testImplementation(libs.junit)
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.12.0'
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-
-    implementation("androidx.room:room-runtime:2.3.0")
-    annotationProcessor("androidx.room:room-compiler:2.3.0")
-
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     def lifecycle_version = "2.3.1"
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")

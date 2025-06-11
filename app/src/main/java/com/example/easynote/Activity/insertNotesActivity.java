@@ -128,21 +128,23 @@ public class insertNotesActivity extends AppCompatActivity {
         Date date = new Date();
         CharSequence sequence = DateFormat.format("dd/MM/yyyy", date.getTime());
 
-        Notes notes1 = new Notes();
-        notes1.notesTitle = title;
-        notes1.notesSubtitle = subtitle;
-        notes1.notes = notes;
-        notes1.notesPriority = priority;
-        notes1.notesDate = sequence.toString();
-        notesViewModel.insertNote(notes1);
+        Notes note = new Notes();
+        note.setNotesTitle(title);
+        note.setNotesSubtitle(subtitle);
+        note.setNotes(notes);
+        note.setNotesPriority(priority);
+        note.setNotesDate(sequence.toString());
+        note.setIsFavorite(false);
+
+        notesViewModel.insertNote(note);
 
         LayoutInflater inflater = getLayoutInflater();
-        View layout = inflater.inflate(R.layout.toast_custom, (ViewGroup)
-                findViewById(R.id.toast_layout_root));
+        View layout = inflater.inflate(R.layout.toast_custom, (ViewGroup) findViewById(R.id.toast_layout_root));
         Toast toast = new Toast(getApplicationContext());
         toast.setDuration(Toast.LENGTH_SHORT);
         toast.setView(layout);
         toast.show();
+
         finish();
     }
 
